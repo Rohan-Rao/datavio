@@ -4,7 +4,8 @@
   "description": "datavio backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Rohan-Rao/datavio/issues"
   },
-  "homepage": "https://github.com/Rohan-Rao/datavio#readme"
+  "homepage": "https://github.com/Rohan-Rao/datavio#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
 }
