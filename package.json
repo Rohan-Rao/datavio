@@ -1,0 +1,19 @@
+{
+  "name": "datavio",
+  "version": "1.0.0",
+  "description": "datavio backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rohan-Rao/datavio.git"
+  },
+  "author": "Rohan.Rao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rohan-Rao/datavio/issues"
+  },
+  "homepage": "https://github.com/Rohan-Rao/datavio#readme"
+}
