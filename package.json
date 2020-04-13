@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
+    "start:dev": "db-migrate up --config config/database.json && node -r dotenv/config app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "./node_modules/.bin/eslint ."
   },
@@ -19,12 +20,16 @@
   },
   "homepage": "https://github.com/Rohan-Rao/datavio#readme",
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2"
   },
   "dependencies": {
+    "db-migrate": "^0.11.6",
+    "db-migrate-mysql": "^2.1.1",
     "express": "^4.17.1",
+    "mysql": "^2.18.1",
     "winston": "^3.2.1"
   }
 }
