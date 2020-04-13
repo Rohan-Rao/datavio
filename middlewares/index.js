@@ -1,3 +1,5 @@
+const logger = require('../utils/logger');
+
 /**
  * a global error handling middleware function
  * @param {Object} err
@@ -8,7 +10,7 @@
 
 // eslint-disable-next-line no-unused-vars
 const handleError = (err, req, res, next) => {
-  console.log(err);
+  logger.error(err);
   const errObj = {};
 
   errObj.status = 'ERROR';
