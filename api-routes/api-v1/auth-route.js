@@ -29,13 +29,13 @@ router.post('/register', (req, res) => {
   });
 });
 
-router.post('/login', (req, res) => {
-  authController.login(req.body).then((result) => {
+// router.post('/login', (req, res) => {
+//   authController.login(req.body).then((result) => {
 
-  }).catch((err) => {
-    logger.error(err);
-    res.json(err);
-  });
-});
+//   }).catch((err) => {
+//     logger.error(err);
+//     res.json(err);
+//   });
+// });
 
 module.exports = router;

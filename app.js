@@ -26,4 +26,5 @@ app.use('/api/v1', apiV1);
  */
 app.use(handleError);
 
+// eslint-disable-next-line no-console
 app.listen(port, () => console.log(`DataVio server started at port ${port}`));

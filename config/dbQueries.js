@@ -1,4 +1,4 @@
-const { secretKeys } = require('../config/config');
+const { secretKeys } = require('./config');
 
 const authQueries = {
   CREATE_NEW_DATAVIO_USER: `insert into register(email_id, user_password, registered_with) values (?, aes_encrypt(?, unhex(sha2(${secretKeys.AES_ENCRYPTION_KEY}, 512))), ?);`,

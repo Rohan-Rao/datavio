@@ -6,7 +6,7 @@ const { authQueries } = require('../config/dbQueries');
 const logger = require('../utils/logger');
 const { generateError } = require('../utils/error-handler');
 const {
-  registrationOptions, httpErrorCodes, secretKeys, sqlErrorCodes
+  registrationOptions, httpErrorCodes, secretKeys, sqlErrorCodes,
 } = require('../config/config');
 const messages = require('../config/messages');
 
@@ -40,27 +40,26 @@ const register = (bodyParams) => new Promise((resolve, reject) => {
   });
 });
 
-const login = (bodyParams) => new Promise((resolve, reject) => {
-  logger.info('in controllers/auth.js -> login function');
-  checkLoginMethod(bodyParams).then((result) => {
+// const login = (bodyParams) => new Promise((resolve, reject) => {
+//   logger.info('in controllers/auth.js -> login function');
+//   checkLoginMethod(bodyParams).then((result) => {
 
-  });
-}).catch((err) => {
-  console.log(err);
-});
+//   });
+// }).catch((err) => {
+//   console.log(err);
+// });
 
-const checkLoginMethod = (bodyParams) => new Promise((resolve, reject) => {
-  logger.info('in controllers/auth.js -> checkLoginMethod function');
-  if (registrationOptions[bodyParams.loginMethod] === registrationOptions.DATAVIO) {
-    return promiseQuery(
-      authQueries.CHECK_USER_EXIST,
-      [bodyParams.emailId, bodyParams.userPassword],
-    );
-  }
-  return Promise.resolve();
-}).then();
+// const checkLoginMethod = (bodyParams) => new Promise((resolve, reject) => {
+//   logger.info('in controllers/auth.js -> checkLoginMethod function');
+//   if (registrationOptions[bodyParams.loginMethod] === registrationOptions.DATAVIO) {
+//     return promiseQuery(
+//       authQueries.CHECK_USER_EXIST,
+//       [bodyParams.emailId, bodyParams.userPassword],
+//     );
+//   }
+//   return Promise.resolve();
+// }).then();
 
 module.exports = {
   register,
-  login,
 };

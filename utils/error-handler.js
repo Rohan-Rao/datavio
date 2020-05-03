@@ -10,6 +10,7 @@ class ErrorHandler extends Error {
   }
 }
 
+// eslint-disable-next-line consistent-return
 const generateError = (statusCode, additionalInfo) => {
   switch (statusCode) {
     case httpErrorCodes.INTERNAL_SRVER_ERROR:
