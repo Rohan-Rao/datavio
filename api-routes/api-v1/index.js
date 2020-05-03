@@ -1,15 +1,10 @@
 const express = require('express');
+const authRoute = require('./auth-route');
 
 const { ErrorHandler } = require('../../utils/error-handler');
 
 const router = express.Router();
 
-router.get('/auth/login', (req, res, next) => {
-  try {
-    if (!undefined) throw new ErrorHandler('404', 'Not Found');
-  } catch (err) {
-    next(err);
-  }
-});
+router.use('/auth', authRoute); // authentication related routes
 
 module.exports = router;
